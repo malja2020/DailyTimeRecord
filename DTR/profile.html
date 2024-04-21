@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTR (Daily Time Record)</title>
+    <link rel="icon" href="worksheet.png" type="image/png">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="profile">
+          <img id="profileImg" src="default-profile.jpg" alt="Profile Picture">
+          <div class="profile-options">
+            <input type="file" id="profileInput" accept="image/*" style="display: none;">
+            <h4>Earl Clarence Camero <br><br> <span id="ojt">MIS - OJT</span></h4>
+            
+            <label for="profileInput" class="edit-profile" id="btnPicture">Edit Picture</label>
+          </div>
+        </div>
+        <ul>
+<li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="dtr.html">Daily Time Record</a></li>
+          <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+
+        <!-- Add a dark mode button -->
+      <br><br><br><br><br><br><br>
+      
+      <button id="darkModeToggle">Dark Mode</button>
+      
+      </div>
+      
+      <div class="container">
+
+      <!------DROP DOWN------>
+      <div class="dropdown">
+        <button class="dropbtn">Actions <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <button id="toggleSidebarBtn">Toggle Sidebar</button>
+        </div>
+      </div>
+      <!-------------------->
+
+       <!-- PROFILE INPUTS -->
+    
+       <div class="profile-form">
+       <div class="profile-inputs">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" value="Earl Clarence Camero"><br>
+
+        <label for="position">Email:</label>
+        <input type="text" id="email" value="earlclarence20@gmail.com"><br>
+
+        <label for="position">Address:</label>
+        <input type="text" id="address" value="Sampalukan St. Lunsad Binangonan Rizal"><br>
+
+        <label for="position">Position:</label>
+        <input type="text" id="position" value="MIS - OJT"><br>
+
+        <button id="saveBtn">Save</button>
+      </div>
+    </div>
+
+      <!-- VALUE METER -->]
+      <div class="value-meter">
+        <h2>Web Design</h2>
+        <meter value="90" min="0" max="100"></meter>
+        <h2>Web Development</h2>
+        <meter value="80" min="0" max="100"></meter>
+        <h2>HTML</h2>
+        <meter value="90" min="0" max="100"></meter>
+        <h2>CSS</h2>
+        <meter value="90" min="0" max="100"></meter>
+        <h2>JavaScript</h2>
+        <meter value="70" min="0" max="100"></meter>
+        <h2>PHP</h2>
+        <meter value="40" min="0" max="100"></meter>
+        <h2>Microsoft Access</h2>
+        <meter value="30" min="0" max="100"></meter>
+        <h2>Mobile Development</h2>
+        <meter value="10" min="0" max="100"></meter>
+        <h2>Front-End Development</h2>
+        <meter value="70" min="0" max="100"></meter>
+        <h2>Back-End Development</h2>
+        <meter value="40" min="0" max="100"></meter>
+      </div>
+    </div>
+        
+      </div>
+    
+    <script src="profile.js"></script>
+</body>
+</html>

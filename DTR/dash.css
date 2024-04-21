@@ -1,0 +1,482 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Change default text color */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+}
+
+.sidebarhidden {
+    transform: translateX(-250px); /* Move the sidebar off the screen */
+}
+
+.profile {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.profile img {
+    margin-top: 20px;
+    border: 3px solid white;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+#ojt {
+    color: gray;
+}
+
+.profile-options button {
+    padding: 8px 16px;
+    background-color: #3498db;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.profile-options button:hover {
+    background-color: #2980b9;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s; /* Add transition for smooth hover effect */
+}
+
+.sidebar ul li.clicked {
+    background-color: #2980b9; /* Background color when clicked */
+}
+
+.sidebar ul li:hover {
+    background-color: #555; /* Change background color on hover */
+    transition: background-color 0.3s; /* Add transition to the hover effect */
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.container {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.container h1 {
+    text-align: center;
+    color: #333;
+}
+
+#dtrForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px;
+}
+
+#inputContainer {
+    margin-left: 40px;
+    display: fixed;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+#inputContainer label,
+#inputContainer input {
+    font-size: 17px;
+    margin-right: 16px;
+    margin-bottom: 10px;
+}
+
+#buttonContainer {
+    flex-basis: 100%; /* Button container takes full width */
+}
+
+#dtrForm button[type="submit"] {
+    width: 100%; /* Button takes full width */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#dtrForm button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+#dtrTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#dtrTable th,
+#dtrTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    background-color: #fff; /* Change background color to white */
+    color: #333; /* Change text color for table cells */
+}
+
+#dtrTable th {
+    color: #fff;
+    background-color: #2196F3; /* Change background color of th */
+}
+
+#dtrTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#dtrTable tbody tr:hover {
+    background-color: #e2e2e2;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #3498db;
+    color: #fff;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Additional styles for the edit profile label */
+.edit-profile {
+    padding: 8px 16px;
+    margin-right: 20px; /* Maintain margin-right */
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.edit-profile:hover {
+    background-color: #2980b9;
+}
+
+#btnPicture {
+    margin-left: 20px;
+}
+
+#addRecordBtn {
+    display: center;
+    background-color: #3498db;
+    margin-left: 60px;
+    font-size: 16px;
+    color: #fff;
+    width: 940px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+
+
+
+/* DARK MODE TOGGLE
+
+/* Add styles for dark mode */
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode #dtrTable th,
+.dark-mode #dtrTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    background-color: #444; /* Change background color to a darker shade */
+    color: #fff; /* Change text color to white */
+}
+
+.dark-mode #dtrTable th {
+    color: #fff;
+    background-color: #2196F3; /* Change background color of th */
+}
+
+.dark-mode #dtrTable tbody tr:nth-child(even) {
+    background-color: #333; /* Change background color to a darker shade */
+}
+
+.dark-mode #dtrTable tbody tr:hover {
+    background-color: #555; /* Change background color on hover */
+}
+
+.dark-mode h1{
+    color: white;
+}
+
+.dark-mode #hours{
+    color: white;
+}
+
+.dark-mode #minutes{
+    color: white;
+}
+
+.dark-mode #seconds{
+    color: white;
+}
+
+.dark-mode #calendar{
+    color: white;
+}
+
+.dark-mode .ap{
+    color: white;
+}
+
+.dark-mode input {
+    background-color: #444; /* Change input background color to a darker shade */
+    color: #fff; /* Change input text color to white */
+    border: 1px solid #666; /* Change input border color */
+}
+
+.dark-mode input:focus {
+    outline-color: #3498db; /* Change input focus outline color */
+}
+
+#darkModeToggle{
+    background-color: #222;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 82px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* DROP DOWN
+
+/* Style the dropdown button */
+  .dropbtn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .dropdown {
+    float: left; /* Align the dropdown to the left */
+    margin-left: 20px; /* Add some left margin */
+   }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Style the buttons inside the dropdown */
+  .dropdown-content button {
+    background-color: transparent;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    width: 100%;
+    text-align: left;
+    Cursor: pointer;
+  }
+  
+  /* Add a hover effect to buttons inside the dropdown */
+  .dropdown-content button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown content when the dropdown button is clicked */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  
+  .container {
+    transition: margin 0.3s ease; /* Add transition for smooth animation */
+  }
+
+  .container-centered {
+    margin: 50px auto; /* Center the container horizontally */
+    text-align: center; /* Align text in the center */
+  }
+
+
+
+
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+  * {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #time {
+    display: flex;
+    gap: 40px;
+    color: black;
+    margin-left: 280px;
+    margin-top: 150px;
+  }
+  
+  #time .circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #time .circle svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+  }
+  
+  #time .circle svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: #191919;
+    stroke-width: 4px;
+    transform: translate(5px, 5px);
+  }
+  
+  #time .circle svg circle:nth-child(2) {
+    stroke: var(--color);
+    stroke-dasharray: 440;
+  }
+  
+  #time div {
+    position: absolute;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  #time div span {
+    position: absolute;
+    transform: translate(-50%, 0px);
+    font-size: 0.5rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+  
+  #time .ap {
+    position: relative;
+    font-size: 1rem;
+    transform: translate(-20px);
+  }
+  
+  .dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+  }
+  
+  .dots::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 15px;
+    height: 15px;
+    background: var(--color);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--color), 0 0 60px var(--color  );
+  }
+
+  #calendar {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-top: 50px;
+  }
+
+  #month{
+    margin-left: 20px;
+  }
+  
+  #date{
+    margin-left: 10px;
+  }
+
+  #year{
+    margin-left: 10px;
+  }
+
+
+  #title{
+    font-size: 50px;
+    font-family: monospace;
+  }

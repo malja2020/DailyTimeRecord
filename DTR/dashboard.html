@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTR (Daily Time Record)</title>
+    <link rel="icon" href="worksheet.png" type="image/png">
+    <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="profile">
+          <img id="profileImg" src="default-profile.jpg" alt="Profile Picture">
+          <div class="profile-options">
+            <input type="file" id="profileInput" accept="image/*" style="display: none;">
+            <h4>Earl Clarence Camero <br><br> <span id="ojt">MIS - OJT</span></h4>
+            
+            <label for="profileInput" class="edit-profile" id="btnPicture">Edit Picture</label>
+          </div>
+        </div>
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="dtr.html">Daily Time Record</a></li>
+          <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+
+        <!-- Add a dark mode button -->
+      <br><br><br><br><br><br><br>
+      
+      <button id="darkModeToggle">Dark Mode</button>
+      
+      </div>
+      
+      
+      <div class="container">
+
+      <!------DROP DOWN------>
+      <div class="dropdown">
+        <button class="dropbtn">Actions <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <button id="toggleSidebarBtn">Toggle Sidebar</button>
+        </div>
+      </div>
+      <!-------------------->
+
+      <h1 id="title">Management Information System</h1>
+
+      <div id="time">
+        <div class="circle" style="--color: #ff2972">
+          <div class="dots h_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="hh"></circle>
+          </svg>
+          <div id="hours">00</div>
+        </div>
+        <div class="circle" style="--color: #fee800">
+          <div class="dots m_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="mm"></circle>
+          </svg>
+          <div id="minutes">00</div>
+        </div>
+        <div class="circle" style="--color: #04fc43">
+          <div class="dots s_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="ss"></circle>
+          </svg>
+          <div id="seconds">00</div>
+        </div>
+        <div class="ap">
+          <div id="ampm">AM</div>
+        </div>
+      </div>
+
+
+      <div id="calendar">
+        <div id="week"></div><span>,</span>
+        <div id="month"></div>
+        <div id="date"></div><span>,</span>
+        <div id="year"></div>
+      </div> 
+
+      </div>
+    
+    <script src="dash.js"></script>
+</body>
+</html>

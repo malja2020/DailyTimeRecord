@@ -1,0 +1,43 @@
+@media print {
+    .sidebar {
+        display: none; /* Hide the left navigation */
+    }
+    
+    #dtrForm {
+        display: none; /* Hide the input form */
+    }
+    #printButton{
+        display: none;
+    }
+    #dtrTable {
+        width: 1000px; /* Adjust the width of the table for printing */
+
+    }
+    .dropbtn {
+        display: none;
+    }
+    .dropdown-content{
+        display: none;
+    }
+    .dropdown{
+        display: none;
+    }
+
+    #acts{
+        display: none;
+        border: none;
+    }
+
+    #btn{
+        display: none;
+        border: none;
+    }
+
+    .edit-btn{
+        display: none;
+    }
+
+    .delete-btn{
+        display: none;
+    }
+}
